@@ -89,5 +89,6 @@ If a round doesn't contain a prime-numbered card or The Douglas (42) it doesn't 
 When all 10 rounds are played the penalty points are calculated for each player. The winner of the game is the player with the fewest penalty points.
 
 If a player attempts to play an illegal card they receive five penalty points. The referee will instead select a legal card from their hand at random. The same applies to discards.
+
 https://cgi.cse.unsw.edu.au/~cs1511/19T1/assignments/ass1/index.html
 
