@@ -107,9 +107,88 @@ exiting because you have not implemented the add_pokemon function in pokedex.c
 // #050: Diglett
 // [End of Pokedex]
 void add_pokemon(Pokedex pokedex, Pokemon pokemon);
+
+
+===========================[ Pokédex ]==========================
+            Welcome to the Pokédex!  How can I help?
+================================================================
+Enter command: a 1 Bulbasaur 0.7 6.9 poison grass
+Added Bulbasaur to the Pokedex!
 ```
 
+# Four more functions
+```
+void detail_pokemon(Pokedex pokedex);
+Pokemon get_current_pokemon(Pokedex pokedex);
+void find_current_pokemon(Pokedex pokedex);
+void print_pokemon(Pokedex pokedex);
 
+$ dcc -o pokedex main.c pokedex.c pokemon.c
+$ ./pokedex
+===========================[ Pokédex ]==========================
+            Welcome to the Pokédex!  How can I help?
+================================================================
+Enter command: a 1 Bulbasaur 0.7 6.9 poison grass
+Enter command: d
+Id: 001
+Name: *********
+Height: --
+Weight: --
+Type: --
+Enter command: p
+--> #001: *********
+Enter command: f
+Enter command: d
+Id: 001
+Name: Bulbasaur
+Height: 0.7m
+Weight: 6.9kg
+Type: Poison Grass
+Enter command: p
+--> #001: Bulbasaur
+Enter command: a 7 Squirtle 0.5 9 water none
+Added Squirtle to the Pokedex!
+Enter command: p
+--> #001: Bulbasaur
+    #007: ********
+Enter command: d
+Id: 001
+Name: Bulbasaur
+Height: 0.7m
+Weight: 6.9kg
+Type: Poison Grass
+Enter command:
+```
+
+# Stage 2: Navigating the List And Destroying the List
+```
+void next_pokemon(Pokedex pokedex);
+void prev_pokemon(Pokedex pokedex);
+void change_current_pokemon(Pokedex pokedex, int pokemon_id);
+void remove_pokemon(Pokedex pokedex);
+void destroy_pokedex(Pokedex pokedex);
+```
+
+# Stage 3: Finding Pokémon
+```
+void go_exploring(Pokedex pokedex, int seed, int factor, int how_many);
+int count_found_pokemon(Pokedex pokedex);
+int count_total_pokemon(Pokedex pokedex);
+```
+
+# Stage 4: Evolutions
+```
+void add_pokemon_evolution(Pokedex pokedex, int from_id, int to_id);
+void show_evolutions(Pokedex pokedex);
+int get_next_evolution(Pokedex pokedex);
+```
+
+# Stage 5: Getting Sub-Lists
+```
+Pokedex get_pokemon_of_type(Pokedex pokedex, pokemon_type type);
+Pokedex get_found_pokemon(Pokedex pokedex);
+Pokedex search_pokemon(Pokedex pokedex, char *text);
+```
 
 
 https://cgi.cse.unsw.edu.au/~cs1511/19T1/assignments/ass2/index.html
