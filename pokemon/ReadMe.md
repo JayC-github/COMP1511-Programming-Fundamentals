@@ -52,6 +52,61 @@ $ ./pokedex
 ================================================================
 Enter command: a 1 Bulbasaur 0.7 6.9 poison grass
 exiting because you have not implemented the add_pokemon function in pokedex.c
+
+
+// Add a new Pokemon to the Pokedex.
+// Note: just adding the Pokemon to the Pokedex does not mean it has
+// been 'found'.
+//
+// The new Pokemon should be added to the end of the Pokedex (i.e.
+// directly after the Pokemon that was added when add_pokemon was last
+// called).
+//
+// When the first Pokemon is added to the Pokédex, the currently
+// selected Pokemon becomes this Pokemon.
+//
+// The currently selected Pokemon remains the first Pokemon that was
+// inserted into the Pokedex, until the `change_current_pokemon`,
+// `next_pokemon`, or `prev_pokemon` functions are called.
+//
+// If there is already a Pokemon in the Pokedex with the same pokemon_id
+// as this Pokemon, the function should print an appropriate error
+// message and exit the program.
+//
+// Pokedex Order:
+// --------------
+// The Pokemon in the Pokedex are stored in the order in which they were
+// added, i.e. the first Pokemon in the Pokedex will be the first
+// Pokemon that was added, the second Pokemon in the Pokedex will be the
+// second Pokemon that was added etc, and the last Pokemon in the
+// Pokedex will be the Pokemon that was added most recently.
+//
+// For example, if Pikachu (#025) was added into an empty Pokedex, the
+// Pokedex would now contain Pikachu at the start of the list, and
+// Pikachu would be the currently selected Pokemon.
+//
+// [Start of Pokedex]
+// #025: Pikachu <-- currently selected Pokemon
+// [End of Pokedex]
+//
+// If Squirtle (#007) was then added, it would be the second Pokemon in
+// the Pokedex, after Pikachu. The currently selected Pokemon would
+// remain Pikachu.
+//
+// [Start of Pokedex]
+// #025: Pikachu <-- currently selected Pokemon
+// #003: Squirtle
+// [End of Pokedex]
+//
+// If Diglett (#050) was then added, it would be the third Pokemon in the
+// Pokedex, after Squirtle.
+//
+// [Start of Pokedex]
+// #025: Pikachu <-- currently selected Pokemon
+// #003: Squirtle
+// #050: Diglett
+// [End of Pokedex]
+void add_pokemon(Pokedex pokedex, Pokemon pokemon);
 ```
 
 
